@@ -46,6 +46,14 @@ source_bashrc()
 	source ~/$startup_file || true
 	echo ""
 }
+set_compresstype()
+{
+    COMPRESSTYPE=$1
+    SMALL_STORAGE="appendonly=true, orientation=column"
+    MEDIUM_STORAGE="appendonly=true, orientation=column"
+    LARGE_STORAGE="appendonly=true, orientation=column, compresstype=$COMPRESSTYPE"
+}
+
 get_version()
 {
 	#need to call source_bashrc first
