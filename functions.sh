@@ -52,6 +52,9 @@ set_compresstype()
     SMALL_STORAGE="appendonly=true, orientation=column"
     MEDIUM_STORAGE="appendonly=true, orientation=column"
     LARGE_STORAGE="appendonly=true, orientation=column, compresstype=$COMPRESSTYPE"
+    echo "SMALL_STORAGE=$SMALL_STORAGE"
+    echo "MEDIUM_STORAGE=$MEDIUM_STORAGE"
+    echo "LARGE_STORAGE=$LARGE_STORAGE"
 }
 
 get_version()
